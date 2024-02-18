@@ -13,39 +13,68 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  background-color: hsl(241, 81%, 54%);
+  padding: 1rem 0;
+  border-radius: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .component {
   display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1.5rem;
 }
 
 .result {
   background-color: hsl(241, 81%, 54%);
   width: 50%;
   padding: 2.5rem 3rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .result > h3 {
   color: hsl(241, 100%, 89%);
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .result > h2 {
   color: white;
   font-size: 2rem;
-  margin: 1rem 0;
 }
 
 .result > p {
   color: hsl(241, 100%, 89%);
+  padding: 0 1.5rem;
 }
 
 .circle {
-  padding: 3.5rem;
+  height: 60%;
+  width: 60%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) -19%,
+    rgba(78, 33, 192, 0.8015581232492998) 43%
+  );
   border-radius: 50%;
-  background: hsl(252, 100%, 67%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #result-number {
@@ -56,4 +85,69 @@ body {
 
 .circle > p:last-child {
   color: hsl(241, 100%, 89%);
+  font-size: 1.3rem;
+}
+
+.summary {
+  padding: 2.5rem;
+  width: 50%;
+}
+
+.summary > h3 {
+  margin-bottom: 1rem;
+}
+
+.summary-lists,
+.summary-icon {
+  display: flex;
+  gap: 1rem;
+}
+
+.summary-lists {
+  justify-content: space-between;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-icon > p {
+  font-weight: 900;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.reaction > .summary-icon > p {
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.memory > .summary-icon > p {
+  color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.verbal > .summary-icon > p {
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual > .summary-icon > p {
+  color: hsl(234, 85%, 45%);
 }
